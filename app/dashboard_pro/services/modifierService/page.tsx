@@ -2,16 +2,17 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { Switch } from "antd";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css"; // Styles pour Quill
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
+// Dynamically import ReactQuill to ensure it's only loaded in the browser environment
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+
 const ModifierUnService = () => {
-  const [description, setDescription] = useState(""); // State pour contenir le contenu de l'éditeur
+  const [description, setDescription] = useState("");
   const [durée, setDurée] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -131,12 +132,12 @@ const ModifierUnService = () => {
         <br />
         <br />
         <ReactQuill
-          theme="snow"
-          value={description}
-          onChange={setDescription}
-          style={{ border: "solid 2px #EAEAEA", marginTop: "2%" }}
-          placeholder="Saisissez la description ici..."
-        />
+        theme="snow"
+        value={description}
+        onChange={setDescription}
+        style={{ border: "solid 2px #EAEAEA", marginTop: "2%" }}
+        placeholder="Saisissez la description ici..."
+      />
       </div>
          <br />
     <div className="flex justify-end"><button type="submit" className="bg-black text-white text-lg rounded" style={{padding:'9px', paddingLeft:'30px', paddingRight:'30px'}}>Modifier</button></div>
