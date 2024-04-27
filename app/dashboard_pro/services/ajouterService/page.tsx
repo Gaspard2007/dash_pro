@@ -1,14 +1,14 @@
-'use client'
 import React, { useState } from "react";
-import dynamic from "next/dynamic";
+import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
 import { Switch } from "antd";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+
+
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const AjouterUnService = () => {
   const [description, setDescription] = useState("");

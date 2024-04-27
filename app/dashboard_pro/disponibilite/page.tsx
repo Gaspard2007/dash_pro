@@ -102,8 +102,7 @@ const WorkScheduleForm: React.FC = () => {
 
     if (inputDate && formattedDate) {
       const selectedDate = inputDate.value;
-      // const formatted = formatDate(selectedDate);
-      // formattedDate.textContent = formatted;
+      
     }
   }
 
