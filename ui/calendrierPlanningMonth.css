@@ -1,0 +1,28 @@
+.event-month {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Affiche des points de suspension (...) lorsque le texte est coupé */
+}
+
+.event-weekday {
+  white-space: nowrap;
+  overflow-y:scroll; /* Utilisation de "auto" pour activer le défilement automatique si nécessaire */
+  max-height: 180px; /* Définissez la hauteur maximale pour activer le défilement */
+  padding-right: 5px; /* Ajoutez un padding pour la visibilité de la barre de défilement */
+}
+
+.event-weekday img {
+ 
+  max-width: 100px; 
+  max-height: 100px;
+  border-radius: 50%; 
+}
+.fc-event-container {
+  max-height: 100px; /* Hauteur maximale des événements */
+  overflow-y: auto; /* Ajouter le défilement vertical si le contenu dépasse la hauteur */
+}
+
+/* Réinitialisez le style des éléments d'événement pour empêcher le débordement */
+.fc-timegrid-event {
+  overflow: hidden; /* Masquer le contenu débordant des événements */
+}

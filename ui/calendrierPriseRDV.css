@@ -1,0 +1,77 @@
+.calendar {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #74788D;
+  }
+  
+  .calendar-day.selected {
+    background-color: black;
+    color: white;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .days-of-week {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+  }
+  
+  .days-of-week div {
+    width: calc(100% / 7);
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  
+  .days div {
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .days div.empty {
+    visibility: hidden;
+  }
+  
+  .days div:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+ 
+  .calendar-day.selected:hover {
+    background-color: black;
+    color: white;
+  }
+  .calendar-day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  /* style au cas ou je veut bloquer des jours on sait jamais*/
+  .calendar-day.disabled {
+    opacity: 0.5; 
+    pointer-events: none; 
+  }  

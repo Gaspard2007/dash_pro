@@ -1,0 +1,5 @@
+.horaireContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Trois colonnes de largeur égale */
+    gap: 10px; /* Espacement entre les éléments */
+}
