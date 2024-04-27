@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 
   const events = [
     {
-      id:0,
+      id: '0',
       title: 'Nom du service',
       start: '2024-04-18T15:00:00',
       end: '2024-04-18T15:45:00',
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
       lieu:' 02 rue des Alpes, 75000 Paris, France',
       tarifs:60,
       notesClient:'Lorem ipsum dolor sit amet, cia ut fringilla in dolor sit amet, cia ut frin dolor sit amet, cia ut frin dolor sit amet, cia ut frin.'
-      
+        
     },
     {
       id:1,
@@ -290,7 +290,6 @@ const Home: React.FC = () => {
     initialView="dayGridMonth"
     allDaySlot={false}
     height={'auto'}
-    events={events}
     eventContent={renderEventContent}
     dayMaxEvents={3}
     
