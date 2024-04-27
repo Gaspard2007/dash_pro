@@ -4,17 +4,16 @@ import PlanningMonth from '@/components/planningMonth';
 import DemoApp from '@/components/planningMonth';
 
 import PlanningWeek from '@/components/planningWeek';
+import { NextPage } from 'next';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-interface PlanningProps {
-    date: Date;
-}
 
-const Planning: React.FC<PlanningProps> = ({ date }) => {
+
+const Planning:NextPage = () => {
   
  
-    const [currentDate, setCurrentDate] = useState(new Date());
+   
     return (
         <div>
             <br />
