@@ -11,8 +11,7 @@ const MesAbonnements: NextPage = () => {
     };
     
 
-    const today = new Date(); // Date actuelle
-
+    const today = new Date()
   
     const estDansLesTemps = abonnement.dateFin > today;
     
