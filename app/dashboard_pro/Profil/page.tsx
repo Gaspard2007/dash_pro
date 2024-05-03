@@ -50,7 +50,17 @@ const Profil: NextPage = () => {
   const handleImageSelect = (index: number) => {
     setSelectedImageIndex(index);
   };
-  
+  const [ReactQuill, setReactQuill] = useState(null);
+
+  useEffect(() => {
+    import("react-quill").then(module => {
+      setReactQuill(module.default);
+    });
+  }, []);
+
+  if (!ReactQuill) {
+    return null; 
+  }
     return (
         <div style={{width:'100%', paddingRight:'10%'}}>
             <br />
