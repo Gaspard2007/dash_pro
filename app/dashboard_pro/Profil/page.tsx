@@ -117,7 +117,7 @@ const Profil: NextPage = () => {
                     <br />
                     <label>Description</label>
                 <div style={{width:'100%'}}>
-                    <Editor/>
+                    <Editor placeholder="Description..." />
         </div>
                 <br />
                 
