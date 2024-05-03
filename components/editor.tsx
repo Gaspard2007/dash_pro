@@ -3,9 +3,7 @@ import dynamic from 'next/dynamic';
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import 'react-quill/dist/quill.snow.css';
 import { Quill } from 'react-quill';
-const Size = Quill.import('attributors/style/size');
-Size.whitelist = fontSizes;
-Quill.register(Size, true);
+
 
 const Editor = (props) => {
     const [editorHtml, setEditorHtml] = useState('');
