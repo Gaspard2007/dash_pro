@@ -50,20 +50,7 @@ const Profil: NextPage = () => {
   const handleImageSelect = (index: number) => {
     setSelectedImageIndex(index);
   };
-  const [ReactQuillComponent, setReactQuillComponent] = useState<typeof ReactQuill | null>(null);
-
   
-  useEffect(() => {
-    import("react-quill").then(module => {
-      // Une fois chargé, définir le composant ReactQuill
-      setReactQuillComponent(module.default);
-    });
-  }, []);
-
-  
-  if (!ReactQuillComponent) {
-    return null; // Rendre null ou un indicateur de chargement pendant le chargement du composant
-  }
     return (
         <div style={{width:'100%', paddingRight:'10%'}}>
             <br />
