@@ -6,8 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import Editor from '@/components/editor'
 const Profil: NextPage = () => {
     const [statut, setStatut] = useState('')
    
@@ -118,13 +117,7 @@ const Profil: NextPage = () => {
                     <br />
                     <label>Description</label>
                 <div style={{width:'100%'}}>
-                    <ReactQuill
-          theme="snow"
-          value={description}
-          onChange={setDescription}
-          style={{ border: "solid 2px #EAEAEA", marginTop: "2%" }}
-          placeholder="Saisissez la description ici..."
-        />
+                    <Editor/>
         </div>
                 <br />
                 
