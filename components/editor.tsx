@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import 'react-quill/dist/quill.snow.css';
-import { Quill } from 'react-quill';
 
-
-const Editor = (props) => {
+const Editor = (props: { placeholder: string }) => { // Typage explicite des propriétés attendues
     const [editorHtml, setEditorHtml] = useState('');
 
-    const handleChange = (html) => {
+    const handleChange = (html: string) => {
         setEditorHtml(html);
     }
 
@@ -31,12 +29,7 @@ const Editor = (props) => {
 Editor.modules = {
     toolbar: [
         [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
-        [{ 'size': fontSizes }],
-        ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-        [{ 'list': 'ordered' }, { 'list': 'bullet' },
-        { 'indent': '-1' }, { 'indent': '+1' }],
-        ['link', 'image', 'video'],
-        ['clean']
+        // Autres configurations de la barre d'outils...
     ],
     clipboard: {
         matchVisual: false,
@@ -51,5 +44,4 @@ Editor.formats = [
 ]
 
 export default Editor;
-
 
